@@ -1,0 +1,32 @@
+            - name: NowSecure
+  # You may pin to the exact commit or the version.
+  # uses: nowsecure/nowsecure-action@f5f990ada03919043d14f6cb1dbfdb6fccf5517d
+  uses: nowsecure/nowsecure-action@v1
+  with:
+    # NowSecure Platform token.
+    token: 
+    # NowSecure GraphQL API endpoint.
+    api_url: # optional, default is https://api.nowsecure.com
+    # NowSecure Lab API endpoint.
+    lab_api_url: # optional, default is https://lab-api.nowsecure.com
+    # NowSecure Lab URL.
+    lab_url: # optional, default is https://lab.nowsecure.com
+    # Path containing .nsconfig.yml
+    config_path: # optional, default is .
+    # Application binary to scan on NowSecure. Must be an Android or iOS application.
+    app_file: 
+    # Group ID for the application in Platform.
+    group_id: 
+    # Head start in milliseconds to give Platform before an application is polled for details. Default is 5 minutes.
+    headstart_ms: # optional, default is 300000
+    # Interval to poll Platform for application details. Default is once a minute.
+    poll_interval_ms: # optional, default is 60000
+    # Enable creation of a SARIF file.
+    enable_sarif: # optional, default is true
+    # Enable posting of dependencies results to GitHub.
+    enable_dependencies: # optional
+    # 
+    github_token: # optional, default is ${{ github.token }}
+    # Used for the correlator field in the SBOM format. Distinguishes independent Workflows.
+    github_correlator: # optional, default is ${{ format('{0}_{1}', github.workflow, github.job) }}
+          
